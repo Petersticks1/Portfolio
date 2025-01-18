@@ -29,7 +29,7 @@ function Hero() {
                             Front-end Web Developer | Mobile Developer
                         </p>
                         <a
-                            href="public/Peter_updated-Resume.pdf"
+                            href="/Peter_updated-Resume.pdf"
                             className="p-4 bg-[#a2a0a0] hover:bg-[#615f5f]">
                             <button className="my-6">
                                 <span className="flex justify-center gap-2">
