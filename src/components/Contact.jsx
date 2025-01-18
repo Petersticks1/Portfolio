@@ -10,7 +10,7 @@ function Contact() {
             <img src="/separatorBlack 1.png" alt="#" className="my-20"/>
 
             <div className="flex flex-col items-center justify-center py-10 bg-black md:py-20 md:flex-row md:gap-28 md:px-28 rounded-xl">
-            <div className="items-center px-5 text-center md:text-justify md:p-4 md:mr-20">
+            <div className="items-center px-5 text-center md:text-left md:p-4 md:mr-20">
             <h1 className="text-3xl font-bold text-white md:text-6xl">
                     Let’s work together <br />on your next project
                    
