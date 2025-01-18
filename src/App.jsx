@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 function App() {
     return (
         <BrowserRouter>
-            <div className="bg-[#d7d7d7] items-center flex flex-col w-[100%] overflow-hidden  ">
+            <div className="bg-[#d7d7d7] items-center flex flex-col w-[100%] overflow-hidden font-sans ">
                 <NavBar />
                 <Hero />
                 <About />
