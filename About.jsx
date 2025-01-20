@@ -14,14 +14,10 @@ function About() {
       className="flex flex-col items-center justify-center my-20 text-center max-w-7xl"
       id="about"
     >
-      <motion.h1
-        variants={fadeIn("right", 0.2)}
-        initial="hidden"
-        //  animate="show"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.7 }} className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6">
+      <h1
+       className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6">
         ABOUT ME
-      </motion.h1>
+      <h1>
       <p className="px-10 my-8 text-justify md:text-center">
         I am Adebayo Peter Oluwagbemileke, a skilled frontend and mobile
         developer with expertise in building responsive web applications
