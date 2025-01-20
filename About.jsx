@@ -1,12 +1,12 @@
 import "../index.css";
 import "./NavBar";
 import { motion } from "framer-motion";
-import { fadeIn } from "./Motion";
+import { fadeOut } from "./Motion";
 
 function About() {
   return (
     <motion.div
-      variants={fadeIn("up", 0.2)}
+      variants={fadeOut("up", 0.2)}
       initial="hidden"
       //  animate="show"
       whileInView={"show"}
