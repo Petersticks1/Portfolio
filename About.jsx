@@ -9,7 +9,7 @@ function About() {
   initial="hidden"
   whileInView={"show"}
   viewport={{ once: true, amount: 0.1 }}
-  className="flex flex-col items-center justify-center my-20 text-center max-w-7xl w-full px-4 debug"
+  className="flex flex-col items-center justify-center my-20 text-center max-w-7xl w-full px-4"
   id="about"
 >
       <h1 className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6">
