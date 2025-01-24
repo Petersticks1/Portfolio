@@ -5,12 +5,12 @@ import { fadeOut } from "./Motion";
 function About() {
   return (
     <motion.div
-      variants={fadeOut("up", 0.2)}
-      initial="hidden"
-      whileInView={"show"}
-    viewport={{ once: true, amount: 0.1 }}
-      className="flex flex-col items-center justify-center my-20 text-center max-w-7xl"
-      id="about"
+  variants={fadeOut("up", 0.2)}
+  initial="hidden"
+  whileInView={"show"}
+  viewport={{ once: true, amount: 0.1 }}
+  className="flex flex-col items-center justify-center my-20 text-center max-w-7xl w-full px-4 debug"
+  id="about"
     >
       <h1 className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6">
         ABOUT ME
@@ -82,7 +82,9 @@ function About() {
           </p>
         </div>
       </div>
+        
       <img src="/separatorBlack 1.png" alt="#" />
+        
     </motion.div>
   );
 }
