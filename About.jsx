@@ -1,20 +1,29 @@
 import "../index.css";
+import "./NavBar";
 import { motion } from "framer-motion";
 import { fadeOut } from "./Motion";
 
 function About() {
   return (
-   <motion.div
-  variants={fadeOut("up", 0.2)}
-  initial="hidden"
-  whileInView={"show"}
-  viewport={{ once: true, amount: 0.1 }}
-  className="flex flex-col items-center justify-center my-20 text-center max-w-7xl w-full px-4"
-  id="about"
->
-      <h1 className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6">
+    <motion.div
+      variants={fadeOut("up", 0.2)}
+      initial="hidden"
+      //  animate="show"
+      whileInView={"show"}
+      viewport={{ once: true, amount: 0.1 }}
+      className="flex flex-col items-center justify-center my-20 text-center max-w-7xl"
+      id="about"
+    >
+      <motion.h1
+        variants={fadeOut("right", 0.2)}
+        initial="hidden"
+        // animate="show"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.1 }}
+        className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6"
+      >
         ABOUT ME
-      <h1>
+      </motion.h1>
       <p className="px-10 my-8 text-justify md:text-center">
         I am Adebayo Peter Oluwagbemileke, a skilled frontend and mobile
         developer with expertise in building responsive web applications
@@ -82,10 +91,8 @@ function About() {
           </p>
         </div>
       </div>
-        
       <img src="/separatorBlack 1.png" alt="#" />
-        
-      </motion.div>
+    </motion.div>
   );
 }
 
