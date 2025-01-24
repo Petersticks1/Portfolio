@@ -8,7 +8,7 @@ function About() {
       variants={fadeOut("up", 0.2)}
       initial="hidden"
       whileInView={"show"}
-      viewport={{ once:true, amount: 0.7 }}
+    viewport={{ once: true, amount: 0.1 }}
       className="flex flex-col items-center justify-center my-20 text-center max-w-7xl"
       id="about"
     >
