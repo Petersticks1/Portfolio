@@ -10,7 +10,7 @@ function About() {
       initial="hidden"
       //  animate="show"
       whileInView={"show"}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0 }}
       className="flex flex-col items-center justify-center my-20 text-center max-w-7xl"
       id="about"
     >
@@ -19,7 +19,7 @@ function About() {
         initial="hidden"
         // animate="show"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true, amount: 0 }}
         className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6"
       >
         ABOUT ME
