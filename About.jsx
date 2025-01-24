@@ -10,16 +10,16 @@ function About() {
       initial="hidden"
       //  animate="show"
       whileInView={"show"}
-      viewport={{ once: true, amount: 0 }}
+      viewport={{ once: true, amount: 1 }}
       className="flex flex-col items-center justify-center my-20 text-center max-w-7xl"
       id="about"
     >
       <motion.h1
-        variants={fadeOut("right", 0.2)}
+        variants={fadeOut("up", 0.2)}
         initial="hidden"
         // animate="show"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0 }}
+        viewport={{ once: true, amount: 1 }}
         className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6"
       >
         ABOUT ME
