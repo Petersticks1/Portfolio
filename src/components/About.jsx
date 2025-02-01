@@ -11,7 +11,7 @@ function About() {
       //  animate="show"
       whileInView={"show"}
       viewport={{ once:true, amount: 0.7 }}
-      className="flex flex-col items-center justify-center my-20 text-center max-w-7xl"
+      className="flex flex-col items-center justify-center my-20 text-center w-full"
       id="about"
     >
       <motion.h1
