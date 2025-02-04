@@ -41,7 +41,7 @@ function Hero() {
               Front-end Web Developer | Mobile Developer
             </p>
             <a
-              href="/Peter_updated-Resume.pdf"
+              href="/Peter-updated-Resume-New.pdf"
               className="p-4 bg-[#a2a0a0] hover:bg-[#615f5f]"
             >
               <button className="my-6">
