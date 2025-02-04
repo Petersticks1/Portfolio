@@ -5,13 +5,7 @@ import { fadeOut } from "./Motion";
 
 function About() {
   return (
-    <motion.div
-      variants={fadeOut("up", 0.2)}
-      initial="hidden"
-      //  animate="show"
-      whileInView={"show"}
-      viewport={{ once: true, amount: 1 }}
-      className="flex flex-col items-center justify-center my-20 text-center max-w-7xl md:opacity-100 md:translate-y-0"
+    <div className="flex flex-col items-center justify-center my-20 text-center max-w-7xl md:opacity-100 md:translate-y-0"
       id="about"
     >
       <motion.h1
@@ -24,7 +18,14 @@ function About() {
       >
         ABOUT ME
       </motion.h1>
-      <p className="px-10 my-8 text-justify md:text-center">
+      
+      <motion.p
+        variants={fadeOut("left", 0.2)}
+        initial="hidden"
+        // animate="show"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 1 }}
+         className="px-10 my-8 text-justify md:text-center">
         I am Adebayo Peter Oluwagbemileke, a skilled frontend and mobile
         developer with expertise in building responsive web applications
         utilizing tools like HTML, CSS, Sass, Boostrap, React, Tailwind CSS, and
@@ -40,7 +41,7 @@ function About() {
         Beyond technical expertise, my dedication to continuous learning ensures
         that I stay updated with the latest trends and advancements in the tech
         world.
-      </p>
+      </motion.p>
 
       <h4 className="px-4 my-8 text-lg font-semibold border-2 border-black border-y-0 mb-14">
         EXPLORE
@@ -92,7 +93,7 @@ function About() {
         </div>
       </div>
       <img src="/separatorBlack 1.png" alt="#" />
-    </motion.div>
+    <div>
   );
 }
 
