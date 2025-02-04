@@ -8,16 +8,9 @@ function About() {
     <div className="flex flex-col items-center justify-center my-20 text-center max-w-7xl"
       id="about"
     >
-      <motion.h1
-        variants={fadeOut("up", 0.2)}
-        initial="hidden"
-        // animate="show"
-        whileInView={"show"}
-        viewport={{ once: true, amount:0}}
-        className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6"
-      >
+      <h1 className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6">
         ABOUT ME
-      </motion.h1>
+      </h1>
       
       <motion.p
         variants={fadeOut("left", 0.2)}
