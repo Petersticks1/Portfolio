@@ -5,7 +5,7 @@ import { fadeOut } from "./Motion";
 
 function About() {
   return (
-    <div className="flex flex-col items-center justify-center my-20 text-center max-w-7xl md:opacity-100 md:translate-y-0"
+    <div className="flex flex-col items-center justify-center my-20 text-center max-w-7xl"
       id="about"
     >
       <motion.h1
