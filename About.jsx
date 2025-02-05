@@ -12,13 +12,7 @@ function About() {
         ABOUT ME
       </h1>
       
-      <motion.p
-        variants={fadeOut("left", 0.2)}
-        initial="hidden"
-        // animate="show"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 1 }}
-         className="px-10 my-8 text-justify md:text-center">
+      <p className="px-10 my-8 text-justify md:text-center">
         I am Adebayo Peter Oluwagbemileke, a skilled frontend and mobile
         developer with expertise in building responsive web applications
         utilizing tools like HTML, CSS, Sass, Boostrap, React, Tailwind CSS, and
@@ -34,7 +28,7 @@ function About() {
         Beyond technical expertise, my dedication to continuous learning ensures
         that I stay updated with the latest trends and advancements in the tech
         world.
-      </motion.p>
+      </p>
 
       <h4 className="px-4 my-8 text-lg font-semibold border-2 border-black border-y-0 mb-14">
         EXPLORE
