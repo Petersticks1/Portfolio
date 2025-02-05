@@ -5,12 +5,7 @@ import { fadeIn } from "./Motion";
 
 function About() {
   return (
-    <motion.div
-      variants={fadeIn("up", 0.2)}
-      initial="hidden"
-      //  animate="show"
-      whileInView={"show"}
-      viewport={{ once:true, amount: 0.7 }}
+    <div
       className="flex flex-col items-center justify-center my-20 text-center w-full"
       id="about"
     >
@@ -18,10 +13,18 @@ function About() {
         variants={fadeIn("right", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.7 }} className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6">
+        viewport={{ once: true, amount: 0.7 }}
+        className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6"
+      >
         ABOUT ME
       </motion.h1>
-      <p className="px-10 my-8 text-justify md:text-center">
+      <motion.p
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.7 }}
+        className="px-10 my-8 text-justify md:text-center"
+      >
         I am Adebayo Peter Oluwagbemileke, a skilled frontend and mobile
         developer with expertise in building responsive web applications
         utilizing tools like HTML, CSS, Sass, Boostrap, React, Tailwind CSS, and
@@ -37,14 +40,20 @@ function About() {
         Beyond technical expertise, my dedication to continuous learning ensures
         that I stay updated with the latest trends and advancements in the tech
         world.
-      </p>
+      </motion.p>
 
       <h4 className="px-4 my-8 text-lg font-semibold border-2 border-black border-y-0 mb-14">
         EXPLORE
       </h4>
       <img src="/separatorBlack 1.png" alt="#" />
 
-      <div className="items-center justify-center px-10 my-20 text-center">
+      <motion.div
+        variants={fadeIn("down", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.7 }}
+        className="items-center justify-center px-10 my-20 text-center"
+      >
         <div className="flex flex-col justify-center gap-10 md:gap-20 md:flex-row ">
           <div className="">
             <span className="relative flex items-center">
@@ -87,9 +96,9 @@ function About() {
             functionalities and solutions.
           </p>
         </div>
-      </div>
+      </motion.div>
       <img src="/separatorBlack 1.png" alt="#" />
-    </motion.div>
+    </div>
   );
 }
 

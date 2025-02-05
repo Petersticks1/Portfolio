@@ -9,19 +9,19 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <div className="bg-[#d7d7d7] items-center flex flex-col w-[100%] overflow-hidden font-sans ">
-                <NavBar />
-                <Hero />
-                <About />
-                <Skills />
-                <Portfolio />
-                <Contact />
-                <Footer />
-            </div>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <div className="bg-[#d7d7d7] items-center flex flex-col w-[100%] overflow-hidden font-sans ">
+        <NavBar />
+        <Hero />
+        <About />
+        <Skills />
+        <Portfolio />
+        <Contact />
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
