@@ -16,7 +16,6 @@ function Hero() {
     slidesToScroll: 1, // Number of slides to scroll at a time
     autoplay: true, // Enable autoplay
     autoplaySpeed: 3000, // Autoplay interval in milliseconds
-    
   };
 
   return (
@@ -38,7 +37,7 @@ function Hero() {
               Adebayo Peter
             </h1>
             <p className="text-[#909090] font-bold md:text-2xl text-lg">
-              Front-end Web Developer | Mobile Developer
+              Front-end Web Developer | Mobile Application Developer
             </p>
             <a
               href="/Peter-updated-Resume-New.pdf"
