@@ -2,7 +2,6 @@ import "../index.css";
 import { motion } from "framer-motion";
 import { fadeIn } from "./Motion";
 
-
 function Skills() {
   return (
     <div
@@ -14,7 +13,9 @@ function Skills() {
         initial="hidden"
         //  animate="show"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.7 }} className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6 ">
+        viewport={{ once: true, amount: 0.7 }}
+        className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6 "
+      >
         SKILLS
       </motion.h1>
 
@@ -24,7 +25,7 @@ function Skills() {
         //  animate="show"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.7 }}
-        className="grid items-center content-center justify-center grid-cols-3 gap-24 my-8 gap-y-10 p-14"
+        className="grid items-center content-center justify-center grid-cols-4 gap-24 my-8 gap-y-10 p-14"
       >
         <div className="flex flex-col items-center ">
           <img src="/html.png" alt="#" />
@@ -62,6 +63,21 @@ function Skills() {
         <div className="flex flex-col items-center">
           <img src="/Boostrap.png" alt="#" />
           <p>Boostrap</p>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <img src="/Redux.png" alt="#" />
+          <p>Redux</p>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <img src="/Expo.png" alt="#" />
+          <p>Expo</p>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <img src="/Jest.png" alt="#" />
+          <p>Jest</p>
         </div>
       </motion.div>
     </div>

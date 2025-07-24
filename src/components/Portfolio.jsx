@@ -22,7 +22,7 @@ function Portfolio() {
 
       <div className="px-8 mt-10 ">
         <motion.h1
-          variants={fadeOut("right", 0.2)}
+          variants={fadeOut("left", 0.2)}
           initial="hidden"
           //  animate="show"
           whileInView={"show"}
@@ -35,6 +35,80 @@ function Portfolio() {
         <div className="grid justify-center gap-10 text-left md:grid-cols-2">
           <motion.div
             variants={fadeOut("right", 0.5)}
+            initial="hidden"
+            //  animate="show"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+            className="bg-black text-white justify-center  p-8 md:text-justify hover:bg-[#2b2626] rounded-xl"
+          >
+            <h1 className="text-2xl font-semibold ">Shelf21 Mobile App</h1>
+            <p className="font-thin">
+              Shelf21 mobile application is a school management system that
+              allows for easy empowers schools, engage students and enhances
+              communications between all stakeholders in a school. This app
+              gives access to guardians and wards, your school sends you invot
+            </p>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.shelf21mobile&pcampaignid=web_share"
+              className="p-4 bg-[#a2a0a0] hover:bg-[#615f5f]"
+            >
+              {" "}
+              <button className="my-8">
+                <span className="flex justify-center gap-2">
+                  {" "}
+                  VISIT GOOGLE PLAYSTORE <ArrowUpRight />
+                </span>
+              </button>
+            </a>
+
+            <video
+              controls
+              autoPlay
+              loop
+              muted
+              playsInline
+              width={600}
+              className="border-4 border-[#a2a0a0] my-5  pointer-events-none"
+            >
+              <source src="/Shelf21.mp4" type="video/mp4" />
+            </video>
+          </motion.div>
+
+          <motion.div
+            variants={fadeOut("left", 0.5)}
+            initial="hidden"
+            //  animate="show"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+            className="bg-black text-white justify-center  p-8 md:text-justify hover:bg-[#2b2626] rounded-xl"
+          >
+            <h1 className="text-2xl font-semibold ">Tender Pay Mobile App</h1>
+            <p className="font-thin">
+              Tender Pay mobile application is an app to buy airtime and data
+              plan, pay bills, and trade crytpo and giftcard
+            </p>
+            <a
+              href="https://play.google.com/store/apps/details?id=co.tenderpay.mobile&pcampaignid=web_share"
+              className="p-4 bg-[#a2a0a0] hover:bg-[#615f5f]"
+            >
+              {" "}
+              <button className="my-8">
+                <span className="flex justify-center gap-2">
+                  {" "}
+                  VISIT GOOGLE PLAYSTORE <ArrowUpRight />
+                </span>
+              </button>
+            </a>
+            <img
+              src="/Tender.png"
+              alt="portfolio"
+              width={600}
+              className="border-4 border-[#a2a0a0] my-5"
+            />
+          </motion.div>
+
+          <motion.div
+            variants={fadeOut("up", 0.5)}
             initial="hidden"
             //  animate="show"
             whileInView={"show"}
@@ -71,7 +145,7 @@ function Portfolio() {
           </motion.div>
 
           <motion.div
-            variants={fadeOut("left", 0.5)}
+            variants={fadeOut("right", 0.5)}
             initial="hidden"
             //  animate="show"
             whileInView={"show"}
@@ -144,11 +218,13 @@ function Portfolio() {
           </motion.div>
 
           <motion.div
-                  variants={fadeOut("left", 0.5)}
-                  initial="hidden"
-                  //  animate="show"
-                  whileInView={"show"}
-                  viewport={{ once: true, amount: 0.7 }}className="bg-black text-white justify-center  p-8 md:text-justify hover:bg-[#2b2626] rounded-xl">
+            variants={fadeOut("left", 0.5)}
+            initial="hidden"
+            //  animate="show"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+            className="bg-black text-white justify-center  p-8 md:text-justify hover:bg-[#2b2626] rounded-xl"
+          >
             <h1 className="text-2xl font-semibold ">TO-DO LIST APP</h1>
             <p className="font-thin">
               To-Do List App is a simple yet powerful productivity tool designed
@@ -178,11 +254,13 @@ function Portfolio() {
           </motion.div>
 
           <motion.div
-                  variants={fadeOut("up", 0.5)}
-                  initial="hidden"
-                  //  animate="show"
-                  whileInView={"show"}
-                  viewport={{ once: true, amount: 0.7 }}className="bg-black text-white justify-center  p-8 md:text-justify hover:bg-[#2b2626] rounded-xl">
+            variants={fadeOut("up", 0.5)}
+            initial="hidden"
+            //  animate="show"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+            className="bg-black text-white justify-center  p-8 md:text-justify hover:bg-[#2b2626] rounded-xl"
+          >
             <h1 className="text-2xl font-semibold "> WEATHER APP</h1>
             <p className="font-thin">
               Weather App is an essential tool designed for staying informed
@@ -213,11 +291,13 @@ function Portfolio() {
           </motion.div>
 
           <motion.div
-                  variants={fadeOut("down", 0.5)}
-                  initial="hidden"
-                  //  animate="show"
-                  whileInView={"show"}
-                  viewport={{ once: true, amount: 0.7 }} className="bg-black text-white justify-center  p-8 md:text-justify hover:bg-[#2b2626] rounded-xl">
+            variants={fadeOut("down", 0.5)}
+            initial="hidden"
+            //  animate="show"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+            className="bg-black text-white justify-center  p-8 md:text-justify hover:bg-[#2b2626] rounded-xl"
+          >
             <h1 className="text-2xl font-semibold ">BLOG PREVIEW</h1>
             <p className="font-thin">
               Blog Preview is a dynamic platform for showcasing and managing
