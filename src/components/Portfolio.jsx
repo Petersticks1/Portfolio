@@ -54,9 +54,15 @@ function Portfolio() {
             >
               {" "}
               <button className="my-8">
-                <span className="flex  gap-2 items-center">
+                <span className="flex justify-center gap-2 items-center">
                   {" "}
-                  VISIT GOOGLE PLAYSTORE <ArrowUpRight />
+                  VISIT{" "}
+                  <img
+                    src="/Playstore.png"
+                    alt="portfolio"
+                    className="w-8 h-8"
+                  />
+                  <ArrowUpRight />
                 </span>
               </button>
             </a>
@@ -93,9 +99,15 @@ function Portfolio() {
             >
               {" "}
               <button className="my-8">
-                <span className="flex justify-center gap-2">
+                <span className="flex justify-center gap-2 items-center">
                   {" "}
-                  VISIT GOOGLE PLAYSTORE <ArrowUpRight />
+                  VISIT{" "}
+                  <img
+                    src="/Playstore.png"
+                    alt="portfolio"
+                    className="w-8 h-8"
+                  />
+                  <ArrowUpRight />
                 </span>
               </button>
             </a>
@@ -131,7 +143,9 @@ function Portfolio() {
               <button className="my-8">
                 <span className="flex justify-center gap-2">
                   {" "}
-                  VISIT SITE <ArrowUpRight />
+                  VISIT
+                  <img src="/Web.gif" alt="visit site" className="w-6 h-6 " />
+                  <ArrowUpRight />
                 </span>
               </button>
             </a>
@@ -168,7 +182,9 @@ function Portfolio() {
               <button className="my-8">
                 <span className="flex justify-center gap-2">
                   {" "}
-                  VISIT SITE <ArrowUpRight />
+                  VISIT
+                  <img src="/Web.gif" alt="visit site" className="w-6 h-6 " />
+                  <ArrowUpRight />
                 </span>
               </button>
             </a>
@@ -204,7 +220,9 @@ function Portfolio() {
               <button className="my-8">
                 <span className="flex justify-center gap-2">
                   {" "}
-                  VISIT SITE <ArrowUpRight />
+                  VISIT
+                  <img src="/Web.gif" alt="visit site" className="w-6 h-6 " />
+                  <ArrowUpRight />
                 </span>
               </button>
             </a>
@@ -240,7 +258,9 @@ function Portfolio() {
               <button className="my-8">
                 <span className="flex justify-center gap-2">
                   {" "}
-                  VISIT SITE <ArrowUpRight />
+                  VISIT
+                  <img src="/Web.gif" alt="visit site" className="w-6 h-6 " />
+                  <ArrowUpRight />
                 </span>
               </button>
             </a>
@@ -277,7 +297,9 @@ function Portfolio() {
               <button className="my-8">
                 <span className="flex justify-center gap-2">
                   {" "}
-                  VISIT SITE <ArrowUpRight />
+                  VISIT
+                  <img src="/Web.gif" alt="visit site" className="w-6 h-6 " />
+                  <ArrowUpRight />
                 </span>
               </button>
             </a>
@@ -313,7 +335,9 @@ function Portfolio() {
               <button className="my-8">
                 <span className="flex justify-center gap-2">
                   {" "}
-                  VISIT SITE <ArrowUpRight />
+                  VISIT
+                  <img src="/Web.gif" alt="visit site" className="w-6 h-6 " />
+                  <ArrowUpRight />
                 </span>
               </button>
             </a>
