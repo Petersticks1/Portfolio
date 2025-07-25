@@ -54,7 +54,7 @@ function Portfolio() {
             >
               {" "}
               <button className="my-8">
-                <span className="flex justify-center gap-2">
+                <span className="flex  gap-2 items-center">
                   {" "}
                   VISIT GOOGLE PLAYSTORE <ArrowUpRight />
                 </span>

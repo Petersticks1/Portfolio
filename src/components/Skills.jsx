@@ -25,7 +25,7 @@ function Skills() {
         //  animate="show"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.7 }}
-        className="grid items-center content-center justify-center grid-cols-4 gap-24 my-8 gap-y-10 p-14"
+        className="grid items-center content-center justify-center grid-cols-3 gap-24 my-8 gap-y-10 p-14 md:grid-cols-4"
       >
         <div className="flex flex-col items-center ">
           <img src="/html.png" alt="#" />
