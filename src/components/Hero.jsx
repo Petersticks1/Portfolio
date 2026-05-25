@@ -1,23 +1,9 @@
 import "../index.css";
-import Slider from "react-slick"; // Import Slider
 import { AtSign, Github, Linkedin, Download, MoveRight } from "lucide-react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 import { fadeIn } from "./Motion";
 
 function Hero() {
-  // Settings for react-slick slider
-  const settings = {
-    dots: true, // Show navigation dots
-    infinite: true, // Loop the images
-    speed: 500, // Transition speed
-    slidesToShow: 1, // Number of slides visible at a time
-    slidesToScroll: 1, // Number of slides to scroll at a time
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 3000, // Autoplay interval in milliseconds
-  };
-
   return (
     <div className="w-[100%] ">
       <main className="pt-20 ">
@@ -41,7 +27,7 @@ function Hero() {
             </p>
             <a
               href="/Peter-updated-Resume-New.New.pdf"
-              className="p-4 bg-[#a2a0a0] hover:bg-[#615f5f]"
+              className="p-4 bg-[#a2a0a0] hover:bg-[#615f5f] rounded-lg"
             >
               <button className="my-6">
                 <span className="flex justify-center gap-2">
@@ -69,7 +55,7 @@ function Hero() {
             </div>
           </motion.div>
 
-          {/* Image Carousel */}
+          {/* Main Image */}
           <motion.div
             variants={fadeIn("left", 0.3)}
             initial="hidden"
@@ -78,29 +64,13 @@ function Hero() {
             viewport={{ once: true, amount: 0.5 }}
             className="w-full p-10 bg-black md:w-2/4"
           >
-            <Slider {...settings}>
-              <div className="">
-                <img
-                  src="/My-picture.png"
-                  alt="Picture 1"
-                  className="w-full h-[700px] object-cover rounded-lg"
-                />
-              </div>
-              <div>
-                <img
-                  src="/My-pics2.jpg"
-                  alt="Picture 2"
-                  className="w-full h-[700px] object-cover rounded-lg"
-                />
-              </div>
-              <div>
-                <img
-                  src="/My-image.jpg"
-                  alt="Picture 3"
-                  className="w-full h-[700px] object-cover rounded-lg"
-                />
-              </div>
-            </Slider>
+            <div className="">
+              <img
+                src="/My-picture.png"
+                alt="My Picture"
+                className="w-full h-[700px] object-cover rounded-lg"
+              />
+            </div>
           </motion.div>
         </div>
 

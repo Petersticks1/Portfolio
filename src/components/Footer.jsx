@@ -7,6 +7,7 @@ import {
   MessageCircle,
   Copyright,
 } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 function Footer() {
   const scrollToTop = () => {
@@ -45,11 +46,11 @@ function Footer() {
           </span>
         </div>
         <div className="relative group">
-          <a href="tel:+2348139084131">
-            <MessageCircle className="transition duration-300 hover:text-green-500" />
+          <a href="https://wa.me/2348139084131" target="_blank" rel="noopener noreferrer">
+            <Icon icon="mdi:whatsapp" className="w-6 h-6 transition duration-300 hover:text-green-500" />
           </a>
           <span className="absolute px-2 py-1 text-sm text-white transition duration-300 transform -translate-x-1/2 bg-gray-800 rounded opacity-0 left-1/2 top-10 group-hover:opacity-100">
-            Message
+            WhatsApp
           </span>
         </div>
       </div>

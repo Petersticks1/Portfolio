@@ -53,7 +53,7 @@ function Contact() {
         >
           <a
             href="mailto:adebayopetergvmc68@gmail.com"
-            className="p-6 bg-[#a2a0a0] hover:bg-[#615f5f]"
+            className="p-6 bg-[#a2a0a0] hover:bg-[#615f5f] rounded-lg"
           >
             {" "}
             <button className="my-12 md:mt-8">
