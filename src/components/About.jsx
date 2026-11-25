@@ -1,104 +1,92 @@
-import "../index.css";
-import "./NavBar";
 import { motion } from "framer-motion";
-import { fadeIn } from "./Motion";
+import { Palette, Code2, Wrench } from "lucide-react";
+import { fadeIn, staggerContainer, staggerItem } from "./Motion";
+
+const SERVICES = [
+  {
+    title: "Design",
+    description:
+      "I design clean, user-centered interfaces tailored to your product goals—either from scratch through collaborative discovery or refining your existing concepts.",
+    icon: Palette,
+  },
+  {
+    title: "Development",
+    description:
+      "I engineer responsive, accessible, and high-performance web and cross-platform mobile applications with modern frameworks like React, Next.js, and React Native.",
+    icon: Code2,
+  },
+  {
+    title: "Maintenance",
+    description:
+      "I debug, optimize, and scale existing codebases—introducing new features, improving performance, and keeping your product reliable as it grows.",
+    icon: Wrench,
+  },
+];
 
 function About() {
   return (
-    <div
-      className="flex flex-col items-center justify-center my-20 text-center w-full"
-      id="about"
-    >
-      <motion.h1
-        variants={fadeIn("right", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.7 }}
-        className="items-center p-4 text-xl font-bold text-center border-4 border-black md:w-1/6"
-      >
-        ABOUT ME
-      </motion.h1>
-      <motion.p
-        variants={fadeIn("up", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.7 }}
-        className="px-10 my-8 text-justify md:text-center"
-      >
-        I am Adebayo Peter Oluwagbemileke, a skilled frontend and mobile
-        developer with expertise in building responsive web applications
-        utilizing tools like HTML, CSS, Sass, Boostrap, React, Tailwind CSS, and
-        modern JavaScript frameworks to craft visually appealing and functional
-        designs, as well as creating cross-platform mobile applications with
-        React Native. My ability to seamlessly integrate design and
-        functionality extends to mobile development, enabling me to deliver
-        user-friendly, performant, and visually appealing mobile solutions. With
-        years of experience in the tech industry, I have honed my skills in
-        debugging, optimizing code, and implementing innovative solutions for
-        complex problems. My ability to bridge the gap between design and
-        functionality makes me a valuable asset in any tech-driven project.
-        Beyond technical expertise, my dedication to continuous learning ensures
-        that I stay updated with the latest trends and advancements in the tech
-        world.
-      </motion.p>
-
-      <h4 className="px-4 my-8 text-lg font-semibold border-2 border-black border-y-0 mb-14">
-        EXPLORE
-      </h4>
-      <img src="/separatorBlack 1.png" alt="#" />
-
-      <motion.div
-        variants={fadeIn("down", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.7 }}
-        className="items-center justify-center px-10 my-20 text-center"
-      >
-        <div className="flex flex-col justify-center gap-10 md:gap-20 md:flex-row ">
-          <div className="">
-            <span className="relative flex items-center">
-              <img src="/tool.png" alt="" className="z-0" />
-              <h2 className="z-10 px-2 -ml-8 text-xl font-bold">DESIGN</h2>
-            </span>
-
-            <p className="text-justify">
-              I can design the website based on your needs and suggestions. I
-              can also create it from scratch by consulting with you during
-              work.
-            </p>
-          </div>
-
-          <div>
-            <span className="relative flex items-center ">
-              {" "}
-              <img src="/image.png" alt="" className="z-0" />
-              <h2 className="z-10 px-2 -ml-8 text-xl font-bold">DEVELOPMENT</h2>
-            </span>
-
-            <p className="text-justify">
-              Based on a project created by me or another one, sent by you, I
-              can program the website to be fully functional and responsive.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-col mt-10 text-justify md:my-4 md:text-center md:items-center">
-          <span className="relative flex items-center text-center">
-            {" "}
-            <img src="/Maintainenace.png" alt="" className="z-0" />{" "}
-            <h2 className="z-10 px-2 mt-4 -ml-8 text-xl font-bold ">
-              MAINTENANCE
-            </h2>
+    <section className="w-full py-14 sm:py-20 md:py-24 px-4 sm:px-6" id="about">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          variants={fadeIn("up", 0.05)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="text-center max-w-3xl mx-auto"
+        >
+          <span className="inline-block px-4 py-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-xs font-bold tracking-widest uppercase text-[var(--text-secondary)] mb-4">
+            About Me
           </span>
-
-          <p className="text-justify">
-            In case of any problems or the need for changes, I can introduce new
-            functionalities and solutions.
+          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--text-primary)]">
+            Bridging design &amp; engineering
+          </h2>
+          <p className="mt-5 sm:mt-6 text-sm sm:text-base md:text-lg text-[var(--text-secondary)] leading-relaxed">
+            I am{" "}
+            <span className="font-semibold text-[var(--text-primary)]">
+              Adebayo Peter Oluwagbemileke
+            </span>
+            , a frontend and mobile application developer experienced in
+            building responsive web applications with HTML, CSS, Sass,
+            Bootstrap, Tailwind CSS, JavaScript, React, and Next.js, alongside
+            cross-platform mobile apps using React Native and Expo. I focus on
+            writing maintainable code, debugging complex issues, and delivering
+            intuitive digital products.
           </p>
-        </div>
-      </motion.div>
-      <img src="/separatorBlack 1.png" alt="#" />
-    </div>
+        </motion.div>
+
+        {/* Three Pillars */}
+        <motion.div
+          variants={staggerContainer(0.12, 0.1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+          className="mt-10 sm:mt-14 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6"
+        >
+          {SERVICES.map((service) => {
+            const IconComponent = service.icon;
+            return (
+              <motion.div
+                key={service.title}
+                variants={staggerItem}
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                className="group p-5 sm:p-6 lg:p-7 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[var(--border-strong)] transition-all duration-300 shadow-sm text-left"
+              >
+                <div className="w-12 h-12 rounded-xl bg-[var(--accent)] text-[var(--accent-fg)] flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110">
+                  <IconComponent className="w-5 h-5" />
+                </div>
+                <h3 className="font-display text-xl font-bold text-[var(--text-primary)] mb-2.5">
+                  {service.title}
+                </h3>
+                <p className="text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed">
+                  {service.description}
+                </p>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </div>
+    </section>
   );
 }
 
