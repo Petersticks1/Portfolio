@@ -58,17 +58,7 @@ const PROJECTS = [
       "https://play.google.com/store/apps/details?id=com.slotmobile",
     iosUrl: "https://apps.apple.com/us/app/slotfinance/id6757859877",
   },
-  {
-    id: "tender-pay",
-    title: "TenderPay Mobile App",
-    category: "mobile",
-    description:
-      "A fintech mobile application for purchasing airtime and data plans, paying utility bills, and trading crypto and gift cards seamlessly.",
-    image: "/Tender.png",
-    androidUrl:
-      "https://play.google.com/store/apps/details?id=co.tenderpay.mobile",
-    iosUrl: null,
-  },
+
   {
     id: "shelf21",
     title: "Shelf21 Mobile App",
@@ -79,6 +69,17 @@ const PROJECTS = [
     androidUrl:
       "https://play.google.com/store/search?q=Shelf21&c=apps",
     iosUrl: "https://apps.apple.com/us/app/shelf21/id6758019424",
+  },
+  {
+    id: "tender-pay",
+    title: "TenderPay Mobile App",
+    category: "mobile",
+    description:
+      "A fintech mobile application for purchasing airtime and data plans, paying utility bills, and trading crypto and gift cards seamlessly.",
+    image: "/Tender.png",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=co.tenderpay.mobile",
+    iosUrl: null,
   },
 
   {
