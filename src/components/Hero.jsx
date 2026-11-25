@@ -1,82 +1,248 @@
-import "../index.css";
-import { AtSign, Github, Linkedin, Download, MoveRight } from "lucide-react";
+import { useState } from "react";
+import {
+  AtSign,
+  Github,
+  Linkedin,
+  Download,
+  ArrowDownRight,
+  Pause,
+  Play,
+} from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn } from "./Motion";
+import { staggerContainer, staggerItem, scaleIn } from "./Motion";
+
+const MARQUEE_ITEMS = [
+  "React",
+  "Next.js",
+  "React Native",
+  "JavaScript",
+  "Tailwind CSS",
+  "Expo",
+  "Redux",
+  "Sass",
+  "Jest",
+  "Git",
+];
 
 function Hero() {
+  const [marqueePaused, setMarqueePaused] = useState(false);
+
+  const scrollToPortfolio = (e) => {
+    e.preventDefault();
+    const el = document.getElementById("portfolio");
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 88;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="w-[100%] ">
-      <main className="pt-20 ">
-        <div className="flex flex-col items-center justify-between md:flex-row ">
+    <section className="relative w-full pt-24 pb-10 sm:pt-28 md:pt-32 lg:pt-36 md:pb-16 overflow-x-clip">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 items-center">
+          {/* Left Content */}
           <motion.div
-            variants={fadeIn("right", 0.3)}
+            variants={staggerContainer(0.09, 0.05)}
             initial="hidden"
             animate="show"
-            whileInView={"show"}
-            viewport={{ once: true, amount: 0.5 }}
-            className="items-center content-center justify-center text-center md:text-left p-14"
+            className="lg:col-span-7 text-center lg:text-left"
           >
-            <h3 className="justify-center my-8 text-2xl font-bold text-black md:text-5xl">
-              Hi, I am
-            </h3>
-            <h1 className="my-4 text-5xl font-bold text-black md:text-7xl">
-              Adebayo Peter
-            </h1>
-            <p className="text-[#909090] font-bold md:text-2xl text-lg">
-              Front-end Web Developer | Mobile Application Developer
-            </p>
-            <a
-              href="/Peter-updated-Resume-New.New.pdf"
-              className="p-4 bg-[#a2a0a0] hover:bg-[#615f5f] rounded-lg"
+            <motion.div
+              variants={staggerItem}
+              className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-[11px] sm:text-xs font-semibold tracking-wide uppercase text-[var(--text-secondary)] mb-5 sm:mb-6 shadow-sm"
             >
-              <button className="my-6">
-                <span className="flex justify-center gap-2">
-                  Download Resume <Download />
-                </span>
-              </button>
-            </a>
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+              </span>
+              Available for projects &amp; collaborations
+            </motion.div>
 
-            <div className="flex flex-col items-center gap-2 md:gap-6 md:my-8 justify-left md:flex-row">
-              <p className="flex flex-row items-center content-center justify-center gap-1 font-bold">
-                Connect with me <MoveRight className="hidden md:block" />
-              </p>
+            <motion.p
+              variants={staggerItem}
+              className="text-base sm:text-lg md:text-2xl font-semibold text-[var(--text-secondary)] mb-1.5 sm:mb-2"
+            >
+              Hi, I am
+            </motion.p>
 
-              <div className="flex items-center gap-6 md:flex-row">
-                <a href="mailto:adebayopetergvmc68@gmail.com">
-                  <AtSign className="p-2 transition duration-300 rounded-lg shadow-xl bg-[#a2a0a0] hover:shadow-2xl size-10 hover:bg-[#615f5f]" />
-                </a>
-                <a href="https://github.com/Petersticks1">
-                  <Github className="p-2 transition duration-300 rounded-lg shadow-xl hover:shadow-2xl size-10 bg-[#a2a0a0] hover:bg-[#615f5f]" />
-                </a>
-                <a href="http://www.linkedin.com/in/adebayo-peter-390074319">
-                  <Linkedin className="p-2 transition duration-300 rounded-lg shadow-xl hover:shadow-2xl size-10 bg-[#a2a0a0] hover:bg-[#615f5f]" />
-                </a>
+            <motion.h1
+              variants={staggerItem}
+              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--text-primary)] leading-[1.06]"
+            >
+              Peter  Adebayo
+            </motion.h1>
+
+            <motion.p
+              variants={staggerItem}
+              className="mt-4 sm:mt-5 text-sm sm:text-lg md:text-xl font-medium text-[var(--text-secondary)] max-w-xl lg:max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+            >
+              Frontend Web Developer &amp; Mobile Application Developer crafting
+              fast, responsive interfaces with{" "}
+              <span className="text-[var(--text-primary)] font-semibold">
+                React, Next.js
+              </span>{" "}
+              &amp;{" "}
+              <span className="text-[var(--text-primary)] font-semibold">
+                React Native
+              </span>
+              .
+            </motion.p>
+
+            {/* Primary & Secondary Actions */}
+            <motion.div
+              variants={staggerItem}
+              className="mt-7 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4 max-w-sm sm:max-w-none mx-auto lg:mx-0"
+            >
+              <motion.a
+                href="/Peter-updated-Resume-New.New.pdf"
+                download
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-[var(--accent)] text-[var(--accent-fg)] font-semibold text-sm shadow-lg hover:opacity-90 transition-opacity"
+              >
+                Download Resume
+                <Download className="w-4 h-4" />
+              </motion.a>
+
+              <motion.a
+                href="#portfolio"
+                onClick={scrollToPortfolio}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-card)] text-[var(--text-primary)] font-semibold text-sm hover:border-[var(--border-strong)] transition-colors"
+              >
+                View Projects
+                <ArrowDownRight className="w-4 h-4" />
+              </motion.a>
+            </motion.div>
+
+            {/* Social Links */}
+            <motion.div
+              variants={staggerItem}
+              className="mt-8 sm:mt-9 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4"
+            >
+              <span className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)]">
+                Connect with me
+              </span>
+              <span
+                className="h-px w-6 bg-[var(--border-subtle)]"
+                aria-hidden="true"
+              />
+              <div className="flex items-center gap-3">
+                <motion.a
+                  href="mailto:adebayopetergvmc68@gmail.com"
+                  aria-label="Send email"
+                  whileHover={{ y: -3, scale: 1.06 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="p-2.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-card)] text-[var(--text-primary)] hover:border-[var(--border-strong)] transition-colors shadow-sm"
+                >
+                  <AtSign className="w-5 h-5" />
+                </motion.a>
+                <motion.a
+                  href="https://github.com/Petersticks1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub profile"
+                  whileHover={{ y: -3, scale: 1.06 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="p-2.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-card)] text-[var(--text-primary)] hover:border-[var(--border-strong)] transition-colors shadow-sm"
+                >
+                  <Github className="w-5 h-5" />
+                </motion.a>
+                <motion.a
+                  href="http://www.linkedin.com/in/adebayo-peter-390074319"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn profile"
+                  whileHover={{ y: -3, scale: 1.06 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="p-2.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-card)] text-[var(--text-primary)] hover:border-[var(--border-strong)] transition-colors shadow-sm"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </motion.a>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
 
-          {/* Main Image */}
+          {/* Right Image Card */}
           <motion.div
-            variants={fadeIn("left", 0.3)}
+            variants={scaleIn(0.2)}
             initial="hidden"
             animate="show"
-            whileInView={"show"}
-            viewport={{ once: true, amount: 0.5 }}
-            className="w-full p-10 bg-black md:w-2/4"
+            className="lg:col-span-5 flex justify-center"
           >
-            <div className="">
-              <img
-                src="/My-picture.png"
-                alt="My Picture"
-                className="w-full h-[700px] object-cover rounded-lg"
-              />
+            <div className="relative w-full max-w-[320px] sm:max-w-sm lg:max-w-md">
+              <motion.div
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                className="relative rounded-3xl overflow-hidden border border-[var(--border-subtle)] bg-[#0a0a0a] p-2.5 sm:p-3 shadow-2xl"
+              >
+                <div className="relative overflow-hidden rounded-2xl aspect-[4/5]">
+                  <img
+                    src="/My-picture.png"
+                    alt="Adebayo Peter"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
+                  />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none"
+                    aria-hidden="true"
+                  />
+                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex items-center justify-between gap-2 px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black/65 backdrop-blur-md border border-white/15 text-white">
+                    <div className="min-w-0">
+                      <p className="text-[10px] sm:text-xs text-neutral-300 font-medium">
+                        Core Stack
+                      </p>
+                      <p className="text-xs sm:text-sm font-semibold truncate">
+                        React • Next.js • React Native
+                      </p>
+                    </div>
+                    <span className="shrink-0 px-2 sm:px-2.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider rounded-full bg-white text-black">
+                      Web &amp; Mobile
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
 
-        <div className="w-full bg-center p-14 bg-custom-pattern md-20"></div>
-      </main>
-    </div>
+        {/* Marquee Strip */}
+        <div className="mt-16 pt-6 border-t border-[var(--border-subtle)] flex items-center gap-4">
+          <button
+            type="button"
+            onClick={() => setMarqueePaused((p) => !p)}
+            aria-label={marqueePaused ? "Play tech marquee" : "Pause tech marquee"}
+            className="shrink-0 p-2 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-card)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+          >
+            {marqueePaused ? (
+              <Play className="w-3.5 h-3.5" />
+            ) : (
+              <Pause className="w-3.5 h-3.5" />
+            )}
+          </button>
+
+          <div className="relative overflow-hidden w-full [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+            <div
+              className="marquee-track gap-8"
+              data-paused={marqueePaused ? "true" : "false"}
+            >
+              {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((tech, idx) => (
+                <span
+                  key={`${tech}-${idx}`}
+                  className="inline-flex items-center gap-3 text-sm font-semibold tracking-wide text-[var(--text-secondary)] whitespace-nowrap"
+                >
+                  <span
+                    className="w-1.5 h-1.5 rounded-full bg-[var(--text-muted)]"
+                    aria-hidden="true"
+                  />
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

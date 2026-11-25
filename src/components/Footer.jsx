@@ -1,65 +1,80 @@
-import "../index.css";
 import {
   ChevronsUp,
   Instagram,
   Twitter,
   Linkedin,
-  MessageCircle,
   Copyright,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 
 function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Adds a smooth scrolling effect
+      behavior: "smooth",
     });
   };
-  return (
-    <div className="flex flex-col items-center w-full py-8 text-white bg-black">
-      <ChevronsUp onClick={scrollToTop} className="hover:cursor-pointer" />
-      <h4 className="py-4"> BACK TO TOP</h4>
-      <div className="flex items-center justify-center gap-4 py-2">
-        <div className="relative group">
-          <a href="https://www.instagram.com/psticks__/">
-            <Instagram className="transition duration-300 hover:text-pink-500" />
-          </a>
-          <span className="absolute px-2 py-1 text-sm text-white transition duration-300 transform -translate-x-1/2 bg-gray-800 rounded opacity-0 left-1/2 top-10 group-hover:opacity-100">
-            Instagram
-          </span>
-        </div>
-        <div className="relative group">
-          <a href="https://x.com/Petersticks1">
-            <Twitter className="transition duration-300 hover:text-blue-500" />
-          </a>
-          <span className="absolute px-2 py-1 text-sm text-white transition duration-300 transform -translate-x-1/2 bg-gray-800 rounded opacity-0 left-1/2 top-10 group-hover:opacity-100">
-            Twitter
-          </span>
-        </div>
-        <div className="relative group">
-          <a href="http://www.linkedin.com/in/adebayo-peter-390074319">
-            <Linkedin className="transition duration-300 hover:text-blue-700" />
-          </a>
-          <span className="absolute px-2 py-1 text-sm text-white transition duration-300 transform -translate-x-1/2 bg-gray-800 rounded opacity-0 left-1/2 top-10 group-hover:opacity-100">
-            LinkedIn
-          </span>
-        </div>
-        <div className="relative group">
-          <a href="https://wa.me/2348139084131" target="_blank" rel="noopener noreferrer">
-            <Icon icon="mdi:whatsapp" className="w-6 h-6 transition duration-300 hover:text-green-500" />
-          </a>
-          <span className="absolute px-2 py-1 text-sm text-white transition duration-300 transform -translate-x-1/2 bg-gray-800 rounded opacity-0 left-1/2 top-10 group-hover:opacity-100">
-            WhatsApp
-          </span>
-        </div>
-      </div>
 
-      <div className="flex items-center pt-6">
-        <Copyright />
-        <span>Adebayo Peter 2025</span>
+  return (
+    <footer className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] py-12 px-6">
+      <div className="max-w-6xl mx-auto flex flex-col items-center gap-6">
+        <motion.button
+          type="button"
+          onClick={scrollToTop}
+          whileHover={{ y: -3 }}
+          whileTap={{ scale: 0.95 }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-xs font-bold tracking-widest uppercase text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--border-strong)] transition-colors"
+        >
+          <ChevronsUp className="w-4 h-4" />
+          Back to top
+        </motion.button>
+
+        <div className="flex items-center justify-center gap-4">
+          <a
+            href="https://www.instagram.com/psticks__/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="p-2.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-card)] text-[var(--text-secondary)] hover:text-pink-500 hover:border-[var(--border-strong)] transition-colors"
+          >
+            <Instagram className="w-5 h-5" />
+          </a>
+          <a
+            href="https://x.com/Petersticks1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter / X"
+            className="p-2.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-card)] text-[var(--text-secondary)] hover:text-sky-500 hover:border-[var(--border-strong)] transition-colors"
+          >
+            <Twitter className="w-5 h-5" />
+          </a>
+          <a
+            href="http://www.linkedin.com/in/adebayo-peter-390074319"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="p-2.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-card)] text-[var(--text-secondary)] hover:text-blue-600 hover:border-[var(--border-strong)] transition-colors"
+          >
+            <Linkedin className="w-5 h-5" />
+          </a>
+          <a
+            href="https://wa.me/2348139084131"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            className="p-2.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-card)] text-[var(--text-secondary)] hover:text-emerald-500 hover:border-[var(--border-strong)] transition-colors"
+          >
+            <Icon icon="mdi:whatsapp" className="w-5 h-5" />
+          </a>
+        </div>
+
+        <div className="flex items-center gap-1.5 text-xs font-medium text-[var(--text-muted)]">
+          <Copyright className="w-3.5 h-3.5" />
+          <span>Adebayo Peter {new Date().getFullYear()}</span>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

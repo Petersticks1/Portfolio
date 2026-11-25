@@ -1,42 +1,213 @@
-@import "slick-carousel/slick/slick.css";
-@import "slick-carousel/slick/slick-theme.css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: light dark;
+
+  /* Light mode preserves the current theme's neutral light palette */
+  --bg-page-light: #d7d7d7;
+  --bg-surface-light: #e5e5e5;
+  --bg-card-light: #ffffff;
+  --bg-card-hover-light: #f5f5f5;
+  --bg-elevated-light: #111111;
+  --text-primary-light: #0a0a0a;
+  --text-secondary-light: #4a4a4a;
+  --text-muted-light: #6b6b6b;
+  --border-subtle-light: rgba(10, 10, 10, 0.12);
+  --border-strong-light: #0a0a0a;
+  --nav-bg-light: rgba(215, 215, 215, 0.8);
+  --accent-light: #0a0a0a;
+  --accent-fg-light: #ffffff;
+  --scrollbar-track-light: #d7d7d7;
+  --scrollbar-thumb-light: #6b6b6b;
+
+  /* Dark mode uses a pure black background */
+  --bg-page-dark: #000000;
+  --bg-surface-dark: #0a0a0a;
+  --bg-card-dark: #0e0e0e;
+  --bg-card-hover-dark: #161616;
+  --bg-elevated-dark: #111111;
+  --text-primary-dark: #f5f5f5;
+  --text-secondary-dark: #a3a3a3;
+  --text-muted-dark: #737373;
+  --border-subtle-dark: rgba(255, 255, 255, 0.12);
+  --border-strong-dark: #ffffff;
+  --nav-bg-dark: rgba(0, 0, 0, 0.78);
+  --accent-dark: #ffffff;
+  --accent-fg-dark: #000000;
+  --scrollbar-track-dark: #000000;
+  --scrollbar-thumb-dark: #404040;
+
+  /* Fallback defaults (light) */
+  --bg-page: var(--bg-page-light);
+  --bg-surface: var(--bg-surface-light);
+  --bg-card: var(--bg-card-light);
+  --bg-card-hover: var(--bg-card-hover-light);
+  --bg-elevated: var(--bg-elevated-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --text-muted: var(--text-muted-light);
+  --border-subtle: var(--border-subtle-light);
+  --border-strong: var(--border-strong-light);
+  --nav-bg: var(--nav-bg-light);
+  --accent: var(--accent-light);
+  --accent-fg: var(--accent-fg-light);
+  --scrollbar-track: var(--scrollbar-track-light);
+  --scrollbar-thumb: var(--scrollbar-thumb-light);
+
+  @media (prefers-color-scheme: dark) {
+    --bg-page: var(--bg-page-dark);
+    --bg-surface: var(--bg-surface-dark);
+    --bg-card: var(--bg-card-dark);
+    --bg-card-hover: var(--bg-card-hover-dark);
+    --bg-elevated: var(--bg-elevated-dark);
+    --text-primary: var(--text-primary-dark);
+    --text-secondary: var(--text-secondary-dark);
+    --text-muted: var(--text-muted-dark);
+    --border-subtle: var(--border-subtle-dark);
+    --border-strong: var(--border-strong-dark);
+    --nav-bg: var(--nav-bg-dark);
+    --accent: var(--accent-dark);
+    --accent-fg: var(--accent-fg-dark);
+    --scrollbar-track: var(--scrollbar-track-dark);
+    --scrollbar-thumb: var(--scrollbar-thumb-dark);
+  }
+
+  @supports (color: light-dark(white, black)) {
+    --bg-page: light-dark(var(--bg-page-light), var(--bg-page-dark));
+    --bg-surface: light-dark(var(--bg-surface-light), var(--bg-surface-dark));
+    --bg-card: light-dark(var(--bg-card-light), var(--bg-card-dark));
+    --bg-card-hover: light-dark(var(--bg-card-hover-light), var(--bg-card-hover-dark));
+    --bg-elevated: light-dark(var(--bg-elevated-light), var(--bg-elevated-dark));
+    --text-primary: light-dark(var(--text-primary-light), var(--text-primary-dark));
+    --text-secondary: light-dark(var(--text-secondary-light), var(--text-secondary-dark));
+    --text-muted: light-dark(var(--text-muted-light), var(--text-muted-dark));
+    --border-subtle: light-dark(var(--border-subtle-light), var(--border-subtle-dark));
+    --border-strong: light-dark(var(--border-strong-light), var(--border-strong-dark));
+    --nav-bg: light-dark(var(--nav-bg-light), var(--nav-bg-dark));
+    --accent: light-dark(var(--accent-light), var(--accent-dark));
+    --accent-fg: light-dark(var(--accent-fg-light), var(--accent-fg-dark));
+    --scrollbar-track: light-dark(var(--scrollbar-track-light), var(--scrollbar-track-dark));
+    --scrollbar-thumb: light-dark(var(--scrollbar-thumb-light), var(--scrollbar-thumb-dark));
+  }
+
+  &:has(> head > meta[name="color-scheme"][content="dark"]) {
+    color-scheme: dark;
+  }
+
+  &:has(> head > meta[name="color-scheme"][content="light"]) {
+    color-scheme: light;
+  }
+
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* Fallback for browsers without light-dark() when meta override is set */
+@supports not (color: light-dark(white, black)) {
+  :root:has(> head > meta[name="color-scheme"][content="dark"]) {
+    --bg-page: var(--bg-page-dark);
+    --bg-surface: var(--bg-surface-dark);
+    --bg-card: var(--bg-card-dark);
+    --bg-card-hover: var(--bg-card-hover-dark);
+    --bg-elevated: var(--bg-elevated-dark);
+    --text-primary: var(--text-primary-dark);
+    --text-secondary: var(--text-secondary-dark);
+    --text-muted: var(--text-muted-dark);
+    --border-subtle: var(--border-subtle-dark);
+    --border-strong: var(--border-strong-dark);
+    --nav-bg: var(--nav-bg-dark);
+    --accent: var(--accent-dark);
+    --accent-fg: var(--accent-fg-dark);
+  }
+  :root:has(> head > meta[name="color-scheme"][content="light"]) {
+    --bg-page: var(--bg-page-light);
+    --bg-surface: var(--bg-surface-light);
+    --bg-card: var(--bg-card-light);
+    --bg-card-hover: var(--bg-card-hover-light);
+    --bg-elevated: var(--bg-elevated-light);
+    --text-primary: var(--text-primary-light);
+    --text-secondary: var(--text-secondary-light);
+    --text-muted: var(--text-muted-light);
+    --border-subtle: var(--border-subtle-light);
+    --border-strong: var(--border-strong-light);
+    --nav-bg: var(--nav-bg-light);
+    --accent: var(--accent-light);
+    --accent-fg: var(--accent-fg-light);
+  }
+}
+
+html {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+}
 
 body {
-    margin: 0;
-    font-family: "poppins, sans-serif";
-    /* background-color: #d7d7d7; */
+  margin: 0;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-* {
-    margin: 0;
+/* Theme toggle icon visibility driven purely by color-scheme */
+.theme-icon-dark {
+  display: none;
+}
+.theme-icon-light {
+  display: inline-flex;
 }
 
-p {
-    margin: 20px 0;
+@media (prefers-color-scheme: dark) {
+  :root:not(:has(> head > meta[name="color-scheme"][content="light"])) .theme-icon-dark {
+    display: inline-flex;
+  }
+  :root:not(:has(> head > meta[name="color-scheme"][content="light"])) .theme-icon-light {
+    display: none;
+  }
 }
 
-.nav-link {
-    @apply px-4 py-2 bg-transparent text-white hover:bg-white hover:text-black transition-colors duration-300;
-    border-radius: 20px;
+:root:has(> head > meta[name="color-scheme"][content="dark"]) .theme-icon-dark {
+  display: inline-flex;
+}
+:root:has(> head > meta[name="color-scheme"][content="dark"]) .theme-icon-light {
+  display: none;
 }
 
-/* .clip-slant {
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-} */
-
-.cont {
-    max-width: 1170px;
+/* Smooth infinite marquee for tech strip */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
+.marquee-track {
+  display: flex;
+  width: max-content;
+}
 
-@media (max-width: 500px) {
-    .nav-link {
-        padding: 1rem;
-        text-align: left;
-    }
+@media (prefers-reduced-motion: no-preference) {
+  .marquee-track[data-paused="false"] {
+    animation: marquee-scroll 28s linear infinite;
+  }
+  .marquee-track[data-paused="false"]:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Native modal dialog scroll containment and backdrop */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(6px);
 }
