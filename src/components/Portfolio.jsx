@@ -52,7 +52,7 @@ const PROJECTS = [
     title: "SlotFinance Mobile App",
     category: "mobile",
     description:
-      "A digital money club for trusted friends—a modern twist on the traditional Ajo system to save, rotate funds, and receive payouts on your own terms.",
+      "A digital money club for trusted friends. It is a modern twist on the traditional Ajo system to save, rotate funds, and receive payouts on your own terms.",
     image: "/slot.png",
     androidUrl:
       "https://play.google.com/store/apps/details?id=com.slotmobile",
@@ -87,15 +87,33 @@ const PROJECTS = [
     title: "SyncBusiness",
     category: "web",
     description:
-      "An e-commerce platform enabling online sellers to own a storefront with an admin dashboard and select from customizable templates. Built templates for live client stores including Erihairmpire and Biscentful.",
+      "An e-commerce platform enabling online sellers to own a storefront with an admin dashboard and select from customizable templates.",
     image: "/SyncBusiness.jpg",
     liveUrl: "https://sync.business/",
     domain: "sync.business",
     extraLinks: [
       { label: "Templates", url: "https://sync.business/templates" },
-      { label: "Erihairmpire", url: "https://erihairmpire.com.ng/" },
-      { label: "Biscentful", url: "https://biscentful.com.ng/" },
     ],
+  },
+  {
+    id: "erihairmpire",
+    title: "Erihairmpire",
+    category: "web",
+    description:
+      "An e-commerce storefront built for Erihairmpire using a custom SyncBusiness template, featuring product browsing, cart management, and online checkout.",
+    image: "/Erihairmpire.jpg",
+    liveUrl: "https://erihairmpire.com.ng/",
+    domain: "erihairmpire.com.ng",
+  },
+  {
+    id: "biscentful",
+    title: "Biscentful",
+    category: "web",
+    description:
+      "An e-commerce storefront built for Biscentful using a custom SyncBusiness template, tailored for seamless fragrance shopping and order management.",
+    image: "/Biscentful.jpg",
+    liveUrl: "https://biscentful.com.ng/",
+    domain: "biscentful.com.ng",
   },
   {
     id: "bellstech",
@@ -107,15 +125,15 @@ const PROJECTS = [
     liveUrl: "https://bellsmulticoncept.com/shop",
     domain: "bellsmulticoncept.com/shop",
   },
-  {
-    id: "recipe-app",
-    title: "Recipe App",
-    category: "web",
-    description:
-      "A user-friendly platform designed to help home cooks and chefs discover, organize, and share their favorite recipes and culinary ideas.",
-    image: "/RecipeApp.png",
-    liveUrl: "https://recipe-web-app-taupe.vercel.app/",
-  },
+  // {
+  //   id: "recipe-app",
+  //   title: "Recipe App",
+  //   category: "web",
+  //   description:
+  //     "A user-friendly platform designed to help home cooks and chefs discover, organize, and share their favorite recipes and culinary ideas.",
+  //   image: "/RecipeApp.png",
+  //   liveUrl: "https://recipe-web-app-taupe.vercel.app/",
+  // },
   {
     id: "admin-dashboard",
     title: "Admin Dashboard",
@@ -125,24 +143,24 @@ const PROJECTS = [
     image: "/Admin-dashboard.png",
     liveUrl: "https://admin-dashboard-psticks.vercel.app/",
   },
-  {
-    id: "calculator-app",
-    title: "Calculator App",
-    category: "web",
-    description:
-      "A clean, responsive calculator built to handle everyday arithmetic and scientific calculations with instant visual feedback.",
-    image: "/Calculator.png",
-    liveUrl: "https://calculator-delta-liart-78.vercel.app/",
-  },
-  {
-    id: "todo-app",
-    title: "To-Do List App",
-    category: "web",
-    description:
-      "A focused productivity tool designed to help users organize, prioritize, and complete daily tasks across work and study.",
-    image: "/Todolist.png",
-    liveUrl: "https://to-do-list-eight-delta-57.vercel.app/",
-  },
+  // {
+  //   id: "calculator-app",
+  //   title: "Calculator App",
+  //   category: "web",
+  //   description:
+  //     "A clean, responsive calculator built to handle everyday arithmetic and scientific calculations with instant visual feedback.",
+  //   image: "/Calculator.png",
+  //   liveUrl: "https://calculator-delta-liart-78.vercel.app/",
+  // },
+  // {
+  //   id: "todo-app",
+  //   title: "To-Do List App",
+  //   category: "web",
+  //   description:
+  //     "A focused productivity tool designed to help users organize, prioritize, and complete daily tasks across work and study.",
+  //   image: "/Todolist.png",
+  //   liveUrl: "https://to-do-list-eight-delta-57.vercel.app/",
+  // },
   {
     id: "weather-app",
     title: "Weather App",
@@ -152,15 +170,15 @@ const PROJECTS = [
     image: "/WeatherApp.png",
     liveUrl: "https://weather-web-app-alpha-seven.vercel.app/",
   },
-  {
-    id: "blog-preview",
-    title: "Blog Preview",
-    category: "web",
-    description:
-      "A clean editorial card interface for showcasing and previewing blog articles with essential metadata and typography.",
-    image: "/Blog.png",
-    liveUrl: "https://blog-preview-card-three.vercel.app/",
-  },
+  // {
+  //   id: "blog-preview",
+  //   title: "Blog Preview",
+  //   category: "web",
+  //   description:
+  //     "A clean editorial card interface for showcasing and previewing blog articles with essential metadata and typography.",
+  //   image: "/Blog.png",
+  //   liveUrl: "https://blog-preview-card-three.vercel.app/",
+  // },
 ];
 
 const FILTERS = [

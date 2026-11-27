@@ -187,7 +187,7 @@ function Hero() {
                     className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none"
                     aria-hidden="true"
                   />
-                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex items-center justify-between gap-2 px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black/65 backdrop-blur-md border border-white/15 text-white">
+                  <div className="hidden sm:flex absolute bottom-4 left-4 right-4 items-center justify-between gap-2 px-4 py-3 rounded-xl bg-black/65 backdrop-blur-md border border-white/15 text-white">
                     <div className="min-w-0">
                       <p className="text-[10px] sm:text-xs text-neutral-300 font-medium">
                         Core Stack
