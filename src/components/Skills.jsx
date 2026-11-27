@@ -10,7 +10,7 @@ const SKILLS = [
   { name: "React", img: "/React.png" },
   { name: "Next.js", iconify: "simple-icons:nextdotjs" },
   { name: "Tailwind CSS", img: "/pngwing.com.png" },
-  { name: "React Native", img: "/pngwing.com (1).png" },
+  { name: "React Native", iconify: "tabler:brand-react-native" },
   { name: "Expo", iconify: "simple-icons:expo" },
   { name: "Redux", img: "/Redux.png" },
   { name: "Bootstrap", img: "/Boostrap.png" },
