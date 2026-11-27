@@ -6,7 +6,7 @@ const SERVICES = [
   {
     title: "Design",
     description:
-      "I design clean, user-centered interfaces tailored to your product goals—either from scratch through collaborative discovery or refining your existing concepts.",
+      "I design clean, user-centered interfaces tailored to your product goals, either from scratch through collaborative discovery or by refining your existing concepts.",
     icon: Palette,
   },
   {
@@ -18,7 +18,7 @@ const SERVICES = [
   {
     title: "Maintenance",
     description:
-      "I debug, optimize, and scale existing codebases—introducing new features, improving performance, and keeping your product reliable as it grows.",
+      "I debug, optimize, and scale existing codebases by introducing new features, improving performance, and keeping your product reliable as it grows.",
     icon: Wrench,
   },
 ];
